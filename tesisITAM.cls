@@ -20,24 +20,19 @@
 \let\if@tesina\iffalse
 \DeclareOption[tesina]{\let\if@tesina\iftrue}
 
-%%%%%%%%%%%%%%%%%%%%%%%%% Inputenc %%%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareOption{utf8}{
-  \PassOptionsToPackage{\CurrentOption}{inputenc}
-}
 
-%%%%%%%%%%%%%%%%%%%%%%%%% Babel 2 idiomas %%%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareOption{spanish}{
-  \PassOptionsToPackage{\CurrentOption}{babel}
-}
+%%%%%%%%%%%%%%%%%%%%%%%%% Babel options %%%%%%%%%%%%%%%%%%%%%%%%%
+% Si cargan el paquete babel preferimos tabla a cuadro
 \DeclareOption{es-tabla}{
   \PassOptionsToPackage{\CurrentOption}{babel}
 }
-\DeclareOption{english}{
-  \PassOptionsToPackage{\CurrentOption}{babel}
-}
+
 
 %% Execute default options
 \ExecuteOptions{10pt,a4paper,oneside}
+
+% Extra opciones van a report class
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 
 %% Process given options
 \ProcessOptions\relax
@@ -47,8 +42,6 @@
 
 
 % Paquetes requeridos
-\RequirePackage{babel}
-\RequirePackage{inputenc}
 \RequirePackage{graphicx}
 
 % Layout del texto
@@ -56,12 +49,35 @@
 \parskip 1ex
 \renewcommand{\baselinestretch}{1.33}
 
-%Abstract Page 
+%%%%%%%%%%%%%%%%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%
+% Definimos un ambiente de nombre abstract que recibe un 
+% parametro: el idioma del abstract. Esto permite cambiar entre
+% ingles y español de una manera sencilla.
+%
+% Ejemplo:
+%
+%	En el encabezado utilizamos 
+%		\usepackage[spanish, english]{babel}
+%
+%
+% 	El resumen entonces se puede escribir como 
+% 		\begin{abstract}[spanish]
+%			Esto es un resumen
+% 		\end{abstract}
+%
+% 		\begin{abstract}[english]
+%			This is an abstract
+% 		\end{abstract}
+% 
 \newenvironment{abstract}[1]{%
-	\begin{otherlanguage}{#1}
-	\bigskip%
-	\begin{center}\bfseries\abstractname\end{center}%
-}{\end{otherlanguage}\par\bigskip}
+	 \bigskip%
+	 \@ifpackagewith{babel}{#1}{\begin{otherlanguage}{#1}}{}
+	 \begin{center}
+	 	\bfseries\abstractname
+	 \end{center}
+}{%
+	\@ifpackagewith{babel}{#1}{\end{otherlanguage}}{}\par\bigskip
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Definiciones para autor %%%%%%%%%%%%%%%%%%%%%%%%%
