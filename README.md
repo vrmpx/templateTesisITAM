@@ -9,7 +9,31 @@ comunidad del ITAM a simplificar el proceso de escritura y edición de
 sus tesis, tesinas o casos. A continuación describimos a mayor detalle
 cada una de las partes de la plantilla.
 
-### Descripción de los archivos
+Ejemplo de uso
+==============
+    \documentclass[a4paper, 11pt]{tesisITAM}
+    \usepackage[utf8]{inputenc}
+    
+    \title{Una tesis del ITAM}
+    \author{Alguien Alguien}
+    \degree{Licenciatura en Matemáticas Aplicadas}
+    \advisor{Dr. Alguien Famoso}
+    \year{2015}
+    
+    \begin{document}
+        \maketitle
+        \publicationrights
+    
+        \begin{abstract}{english}
+            This is an abstract
+        \end{abstract}
+    
+        
+    \end{document}
+
+
+Descripción de los archivos
+============================
 
 1.  El archivo **tesisITAM.cls** define una nueva clase de documento con
     el mismo nombre. Esta clase se basa en el tipo reporte, el cual se
@@ -94,7 +118,7 @@ capítulo **chapterquote** que recibe dos parámetros: el autor y el
 texto. Para un ejemplo, referirse al principio de este capítulo.
 
 Licencia
---------
+========
 
 Esta plantilla se distribuye bajo la licencia *creative commons BY-SA
 3.0*. Esta licencia permite la modificación de cualquier aspecto de la
@@ -109,5 +133,5 @@ plantilla siempre y cuando se respeten las siguientes condiciones:
     la plantilla.
 
 Autores
--------
+=======
 __Víctor R. Martínez__: Estudiante de Maestría en Ciencias de la Computación en el ITAM. Terminó la carrera de Ingeniería en Computación y Licenciatura de Matemáticas Aplicadas.
