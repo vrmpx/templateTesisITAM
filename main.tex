@@ -1,11 +1,79 @@
+% Tesis ITAM CLASS -- version 0.1 (13 - Abr - 2015)
+% Clase para las tesis del ITAM
+% 
+% 13 - Abr - 2015 	Victor Martinez 	victor.martinez (at) itam.mx
+% LICENSE: Creative Commons SA-BY 3.0
+%
+%
+% Este documento presenta un ejemplo de uso de la plantilla
+% El estudiante es libre de modificar este archivo a su gusto
+% 
 \documentclass{tesisITAM}
+\usepackage[utf8]{inputenc}
 
-\title{Una Tesis}
-\author{Juan Perez}
-\degree{Licenciatura en Algo}
-\advisor{Dr. Alguien Famoso}
+\title{Plantilla para Tesis y Tesinas del ITAM}
+\author{Víctor R. Martínez}
+\degree{Lic. Matemáticas Aplicas e Ing. en Computación}
+\advisor{\_}
 \year{2015}
 
 \begin{document}
+
+	\pagenumbering{gobble}
 	\maketitle
+	\publicationrights
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% ABSTRACT
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\begin{abstract}{spanish}
+		Este documento presenta una plantilla para usar en las tesis y tesinas del ITAM. Se provee de manera gratuita y sin ninguna responsabilidad bajo la licencia \emph{creative commons BY-SA 3.0}.
+	\end{abstract}
+
+	\begin{abstract}{english}
+		In this work we present a template for thesis and titulation works presented at ITAM. It is provided freely and without any responsability under the \emph{creative commons BY-SA 3.0}. 
+	\end{abstract}
+
+
+	\selectlanguage{spanish}
+	\setcounter{page}{1}
+	\pagenumbering{roman}
+
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\newpage
+
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% CONTENT
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\include{Chapters/introduction}
+
+	% \include{Chapters/relatedwork}
+
+	% \include{Chapters/method}
+
+	% \include{Chapters/results}
+
+	% \include{Chapters/conclusions}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% APPENDIX
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\appendix
+	% \include{Chapters/appendixA}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% BIBLIOGRAPHY
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\clearpage
+	\addcontentsline{toc}{chapter}{References} %Añadimos la bibliografia a la lista de contenidos.
+	\bibliographystyle{plain}
+	\bibliography{referencias}
+
 \end{document}
