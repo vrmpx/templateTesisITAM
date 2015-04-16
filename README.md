@@ -96,11 +96,15 @@ El comando **\\maketitle** produce la portada con los campos previamente
 definidos. Utiliza el logo del ITAM, el cual se debe encontrar en el
 **PATH** de LaTeX(*e.g.*, en el fólder de Figures).
 
+![Portada de la tesis](https://cloud.githubusercontent.com/assets/1670648/7182322/3488eefa-e416-11e4-84a5-7ec345fd866b.png)
+
 #### Cediendo derechos de publicación
 
 El comando **\\publicationrights** imprime una página con el texto
 oficial de cede de derechos. Los nombres de la tesis (tesina) y del
 autor se obtienen de los campos previamente definidos.
+
+![Derechos de publicación](https://cloud.githubusercontent.com/assets/1670648/7182329/3a85c6c0-e416-11e4-835e-82a511e6d18a.png)
 
 #### Añadiendo el resumen
 
