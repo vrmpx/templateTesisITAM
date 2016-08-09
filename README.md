@@ -139,9 +139,3 @@ plantilla siempre y cuando se respeten las siguientes condiciones:
 Autor
 =======
 __Víctor R. Martínez__: Estudiante de Maestría en Ciencias de la Computación en el ITAM. Terminó la carrera de Ingeniería en Computación y Licenciatura de Matemáticas Aplicadas.
-
-Colaboradores
-=============
-__Hugo Cardoza__: Estudiante de Ing. en Computación y Lic. en Matemáticas Aplicadas.
-
-__Jesús D. Arroyo__: Estudiante de doctorado en la Universidad de Michigan. Terminó la carrera de Ingeniería en Computación y Licenciatura de Matemáticas Aplicadas en el ITAM.
